@@ -64,6 +64,8 @@ app.post("/churches", (req, res) => {
   res.send(req.body);
 });
 
-app.listen("3000", () => {
-  console.log("running at 3000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`running at ${PORT}`);
 });
